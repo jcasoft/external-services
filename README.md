@@ -4,7 +4,7 @@ Mycroft Webchat Client and Mycroft bluetooth service getting the MAC address of 
 
 ## Requirements
 
-This code requires the bluetooth module to be installed. On Ubuntu/Debian systems, this can usually be done with the following commands:
+This code requires the bluetooth module to be installed. On Mark1, Picroft or Ubuntu/Debian systems, this can usually be done with the following commands:
 
     sudo apt-get install bluetooth bluez blueman
 
@@ -16,16 +16,23 @@ For use with Mark1 or if you have problem with Picroft you need a [USB Bluetooth
 
 ## Installation
 
-cd /opt/mycroft
+For all instalations
 
+    cd /opt/mycroft
 
-    if the installation is in Mark1 or Picroft
-        sudo su mycroft
+if the installation is in Mark1 or Picroft
+
+    sudo su mycroft
+
+For all instalations
 
     git clone https://github.com/jcasoft/external-services.git
 
-    if the installation is in Mark1 or Picroft
-        exit
+if the installation is in Mark1 or Picroft
+
+    exit
+
+For all instalations
         
     sudo chmod -R a+rwx external-services
 
@@ -48,29 +55,31 @@ Mark1 command line
 
 Locate your configuration file and add the section detailed belove
 
-    Linux
-        nano ~/.mycroft/mycroft.conf
+Linux
 
-    Mark1 or Picroft
+    nano ~/.mycroft/mycroft.conf
 
-        sudo su mycroft
+Mark1 or Picroft
 
-        nano /home/pi/.mycroft/mycroft.conf
+    sudo su mycroft
 
-        exit
+    nano /home/pi/.mycroft/mycroft.conf
+
+    exit
+
 
 Add this section to mycroft.conf
 
-	"Proximity": {
-            "proximity_enabled": true, 
-            "proximity_data": [
-                {"bt_id": "00:00:00:00:00:1A","name": "Juan Carlos"},
-                {"bt_id": "00:00:00:00:00:1B","name": "Adriana"},
-                {"bt_id": "00:00:00:00:00:1C","name": "Daniella"},
-                {"bt_id": "00:00:00:00:00:1D","name": "Enzo"},
-                {"bt_id": "00:00:00:00:00:1E","name": "Gianluca"}
-            ]
-        }
+    "Proximity": {
+        "proximity_enabled": true, 
+        "proximity_data": [
+            {"bt_id": "00:00:00:00:00:1A","name": "Juan Carlos"},
+            {"bt_id": "00:00:00:00:00:1B","name": "Adriana"},
+            {"bt_id": "00:00:00:00:00:1C","name": "Daniella"},
+            {"bt_id": "00:00:00:00:00:1D","name": "Enzo"},
+            {"bt_id": "00:00:00:00:00:1E","name": "Gianluca"}
+        ]
+    }
 
 
 Fill the bt_id with bluetooth MAC address of your smart phone
@@ -79,77 +88,83 @@ Fill the bt_id with bluetooth MAC address of your smart phone
 
 ## How to start Presence service
 
-    Linux
+Linux
 
-        cd /opt/mycroft/external-services
-        bash start-presence.sh linux
+    cd /opt/mycroft/external-services
+    bash start-presence.sh linux
 
-        cd ~/mycroft-core
-        bash start-mycroft.sh debug
+    cd ~/mycroft-core
+    bash start-mycroft.sh debug
 
 
-    Mark1 or Picroft
+Mark1 or Picroft
 
-        cd /opt/mycroft/external-services
-        bash start-presence.sh mark1   or   bash start-presence.sh picroft
+    cd /opt/mycroft/external-services
+    bash start-presence.sh mark1   
+    or
+    bash start-presence.sh picroft
 
 
 ## How to stop Presence service
 
-    Linux, Mark1 and Picroft
+Linux, Mark1 and Picroft
 
-        cd /opt/mycroft/external-services
-        bash stop-presence.sh
+    cd /opt/mycroft/external-services
+    bash stop-presence.sh
+
 
 ## How to start Webchat service
 
-    Linux
+Linux
 
-        cd /opt/mycroft/external-services
-        bash start-webchat.sh linux
+    cd /opt/mycroft/external-services
+    bash start-webchat.sh linux
 
-        cd ~/mycroft-core
-        bash start-mycroft.sh debug
+    cd ~/mycroft-core
+    bash start-mycroft.sh debug
 
 
-    Mark1 or Picroft
-        cd /opt/mycroft/external-services
-        bash start-webchat.sh mark1   or   bash start-webchat.sh picroft
+Mark1 or Picroft
+
+    cd /opt/mycroft/external-services
+    bash start-webchat.sh mark1
+    or
+    bash start-webchat.sh picroft
 
 
 ## How to stop Webchat service
 
-    Linux, Mark1 and Picroft
+Linux, Mark1 and Picroft
 
-        cd /opt/mycroft/external-services
-        bash stop-webchat.sh
+    cd /opt/mycroft/external-services
+    bash stop-webchat.sh
 
 
 ## How to start both service
 
-    Linux
+Linux
 
-        cd /opt/mycroft/external-services
-        bash start-all.sh linux
+    cd /opt/mycroft/external-services
+    bash start-all.sh linux
 
-        cd ~/mycroft-core
-        bash start-mycroft.sh debug
-
-
-    Mark1 or Picroft
-        cd /opt/mycroft/external-services
-
-        bash start-all.sh mark1
-        or   
-        bash start-all.sh picroft
+    cd ~/mycroft-core
+    bash start-mycroft.sh debug
 
 
-## How to stop Webchat service
+Mark1 or Picroft
+    cd /opt/mycroft/external-services
 
-    Linux, Mark1 and Picroft
+    bash start-all.sh mark1
+    or   
+    bash start-all.sh picroft
 
-        cd /opt/mycroft/external-services
-        bash stop-all.sh
+
+## How to stop both services
+
+Linux, Mark1 and Picroft
+
+    cd /opt/mycroft/external-services
+    bash stop-all.sh
 
 ## How to access Web chat from your browser
 
