@@ -16,7 +16,7 @@ For use with Mark1 or if you have problem with Picroft you need a [USB Bluetooth
 
 ## Installation
 
-For all instalations
+For all installations
 
     cd /opt/mycroft
 
@@ -24,7 +24,7 @@ if the installation is in Mark1 or Picroft
 
     sudo su mycroft
 
-For all instalations
+For all installations
 
     git clone https://github.com/jcasoft/external-services.git
 
@@ -32,7 +32,7 @@ if the installation is in Mark1 or Picroft
 
     exit
 
-For all instalations
+For all installations
         
     sudo chmod -R a+rwx external-services
 
