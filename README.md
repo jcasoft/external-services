@@ -13,6 +13,7 @@ This code requires the bluetooth module to be installed. On Ubuntu/Debian system
 ## Installation
 
 cd /opt/mycroft
+
 git clone https://github.com/jcasoft/external-services.git
 
 
