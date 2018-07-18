@@ -34,7 +34,7 @@ if the installation is in Mark1 or Picroft
 
 For all installations
         
-    sudo chmod -R a+rwx external-services
+    sudo chmod -R a+rwx /opt/mycroft/external-services
 
 
 ## Installation of USB bluetooth dongle on Mark1 or if you have problem with Picroft
@@ -61,10 +61,12 @@ Linux
 
 Mark1 or Picroft
 
-    sudo su mycroft
-
     nano /home/pi/.mycroft/mycroft.conf
 
+    and
+
+    sudo su mycroft
+    nano /home/mycroft/.mycroft/mycroft.conf
     exit
 
 
@@ -82,7 +84,7 @@ Add this section to mycroft.conf
     }
 
 
-Fill the bt_id with bluetooth MAC address of your smart phone
+Fill the bt_id with bluetooth MAC address of your smartphone
 
 ![Screenshot](IOS-Bluetooth-MAC-Address.png?raw=true)
 
